@@ -1,4 +1,4 @@
-import React from 'react'
+import Link from "next/link"
 
 function Project() {
   return (
@@ -17,10 +17,10 @@ function Project() {
           <p className='text-sm font-normal text-[#D9D9D9]'>ReactJS Weather Application where one can search for places they want the weather data for.</p>
           <div className='text-sm font-normal text-[#D9D9D9]'><span className='text-sm font-medium'>Tech Stack : </span>React JS, JavaScript, Tailwind CSS</div>
           <div>
-            <a href="https://github.com/sumankr0087/weatherapp" target="_blank" className='flex gap-2'>
+            <Link href="https://github.com/sumankr0087/weatherapp" target="_blank" className='flex gap-2'>
             <img src="GitHub.png" alt=""  className='h-[16px] bg-white rounded-full'/>
             <span className='text-sm font-normal text-[#D9D9D9] underline'>View Code</span>
-            </a>
+            </Link>
           </div>
           </div>
         </div>
@@ -31,10 +31,10 @@ function Project() {
           <p className='text-sm font-normal text-[#D9D9D9]'>A system where patients can be added and appointments can be scheduled with notes.</p>
           <div className='text-sm font-normal text-[#D9D9D9]'><span className='text-sm font-medium'>Tech Stack : </span>FastAPI, React JS, SQL, Tailwind CSS</div>
           <div>
-            <a href="https://github.com/sumankr0087/Patient-appointment-system" target="_blank" className='flex gap-2'>
+            <Link href="https://github.com/sumankr0087/Patient-appointment-system" target="_blank" className='flex gap-2'>
             <img src="GitHub.png" alt=""  className='h-[16px] bg-white rounded-full'/>
             <span className='text-sm font-normal text-[#D9D9D9] underline'>View Code</span>
-            </a>
+            </Link>
           </div>
           </div>
           
@@ -46,13 +46,12 @@ function Project() {
           <p className='text-sm font-normal text-[#D9D9D9]'>NextJs Application where user can Signup and Login.</p>
           <div className='text-sm font-normal text-[#D9D9D9]'><span className='text-sm font-medium'>Tech Stack : </span>NextJs, TypeScript, Tailwind CSS, MongoDB</div>
           <div>
-            <a href="https://github.com/sumankr0087/nextjsauth" target="_blank" className='flex gap-2'>
+            <Link href="https://github.com/sumankr0087/nextjsauth" target="_blank" className='flex gap-2'>
             <img src="GitHub.png" alt=""  className='h-[16px] bg-white rounded-full'/>
             <span className='text-sm font-normal text-[#D9D9D9] underline'>View Code</span>
-            </a>
+            </Link>
           </div>
           </div>
-          
         </div>
       </div>
     </div>
