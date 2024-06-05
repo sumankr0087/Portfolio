@@ -3,7 +3,7 @@ function Header() {
     return (
         <div className="flex flex-row md:px-8 px-4 py-2 z-10 fixed right-0 left-0 top-0 bg-gray-800 border-b border-gray-800">
             <div className="grow">
-                <img src="letter-s.gif" alt="Computer man" className="md:h-12 h-10"></img>
+            <Link href="/"> <img src="letter-s.gif" alt="Computer man" className="md:h-12 h-10"></img></Link>
             </div>
             <div className="flex grow justify-end md:gap-5 gap-2 items-center">
                 <div className="text-sm font-normal text-[#D9D9D9]"><Link href="/">Home</Link></div>

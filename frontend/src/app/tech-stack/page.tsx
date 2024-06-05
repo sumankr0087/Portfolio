@@ -34,7 +34,7 @@ function TechStack() {
           <div className="text-[#D9D9D9]">VueJs</div>
         </div>
         <div className="flex flex-col justify-center items-center gap-4">
-          <img src="Nuxt JS.PNG" alt="" className="h-[80px] w-[80px]"/>
+          <img src="Nuxt JS.png" alt="" className="h-[80px] w-[80px]"/>
           <div className="text-[#D9D9D9]">NuxtJs</div>
         </div>
         <div className="flex flex-col justify-center items-center gap-4">
@@ -46,7 +46,7 @@ function TechStack() {
           <div className="text-[#D9D9D9]">HTML</div>
         </div>
         <div className="flex flex-col justify-center items-center gap-4">
-          <img src="CSS3.PNG" alt="" className="h-[80px] w-[80px]"/>
+          <img src="CSS3.png" alt="" className="h-[80px] w-[80px]"/>
           <div className="text-[#D9D9D9]">CSS</div>
         </div>
         <div className="flex flex-col justify-center items-center gap-4">
