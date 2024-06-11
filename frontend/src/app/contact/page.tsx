@@ -1,6 +1,6 @@
 function Contect() {
   return (
-    <div className="md:px-[8rem] mt-20 px-[2rem] flex flex-col justify-center items-center gap-4 mb-[4rem]">
+    <div className="md:px-[8rem] mt-20 px-[2rem] flex flex-col justify-center items-center gap-4 mb-[10rem]">
       <div className="text-3xl font-semibold text-[#D9D9D9]">Contact</div>
       <div className="flex md:flex-row flex-col gap-10">
         <div className='text-base font-normal text-[#D9D9D9] flex gap-4 justify-start md:justify-center items-center'>
