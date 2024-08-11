@@ -6,7 +6,7 @@ function Introduction() {
                 <h1 className="text-3xl font-semibold mb-2 text-[#D9D9D9]">Suman Kumar</h1>
                 <div className="text-base font-normal mb-5 text-[#D9D9D9]">
                     Specialized in building optimised website using
-                    Python, Django, Git, Vue.js, Nuxt.js, React.js, Next.js, Vuex, HTML, CSS, Tailwind.
+                    Python, Django, Git, Vue.js, Nuxt.js, React.js, Vuex, HTML, CSS, Tailwind.
                 </div>
                 <div className="text-base font-normal mb-8 text-[#D9D9D9]">
                     I am a professional Software Developer with 3+ years of experience.

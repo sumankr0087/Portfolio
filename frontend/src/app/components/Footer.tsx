@@ -11,7 +11,7 @@ function Footer() {
   }, []);
 
   return (
-    <div className="flex z-10 fixed mt-8 right-0 left-0 bottom-0 bg-gray-800 border-b border-gray-800">
+    <div className="flex z-10 mt-8 right-0 left-0 bottom-0 bg-gray-800 border-b border-gray-800">
       <div className="flex flex-col bg-gray-800 w-fill-available">
         <div className="flex flex-row gap-6 p-4 justify-center mr-10">
           <div className="bg-zinc-200 rounded-full">
