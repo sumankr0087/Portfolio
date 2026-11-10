@@ -19,10 +19,10 @@ export default function Hero() {
             Developer at Double9 Books
           </span>
 
-          <p className="font-display text-5xl md:text-6xl font-bold text-neutral-900 leading-none">
+          <p className="font-display text-4xl sm:text-5xl md:text-6xl font-bold text-neutral-900 leading-none">
             Hi, I&apos;m
           </p>
-          <h1 className="font-display text-6xl md:text-7xl font-bold pink-text leading-none mt-1 mb-4">
+          <h1 className="font-display text-5xl sm:text-6xl md:text-7xl font-bold pink-text leading-none mt-1 mb-4 break-words">
             Suman Kumar
           </h1>
           <p className="font-mono text-sm md:text-base text-neutral-500 mb-5">
