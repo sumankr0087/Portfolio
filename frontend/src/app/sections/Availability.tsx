@@ -2,8 +2,8 @@ import { FiArrowUpRight } from "react-icons/fi";
 
 const offers = [
   {
-    title: "Web App Development",
-    desc: "End-to-end full-stack web applications — responsive React, Vue & Next.js frontends backed by scalable Python, Django & FastAPI REST APIs, with secure auth, clean architecture and production-ready performance.",
+    title: "Web & Mobile App Development",
+    desc: "End-to-end full-stack web and cross-platform mobile apps — responsive React, Vue & Next.js frontends backed by scalable Python, Django & FastAPI REST APIs, with secure auth, clean architecture and production-ready performance.",
   },
   {
     title: "AI Agent & LLM Projects",
