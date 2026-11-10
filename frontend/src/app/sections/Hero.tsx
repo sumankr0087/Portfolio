@@ -62,7 +62,7 @@ export default function Hero() {
       </div>
 
       {/* Stats */}
-      <div className="grid grid-cols-3 gap-4 mt-14 max-w-2xl">
+      <div className="grid grid-cols-3 gap-4 mt-14 max-w-2xl mx-auto">
         {stats.map((s) => (
           <div key={s.v} className="text-center">
             <div className="font-display text-3xl md:text-4xl font-bold pink-text">{s.k}</div>
