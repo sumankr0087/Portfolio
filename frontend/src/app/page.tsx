@@ -5,6 +5,7 @@ import Skills from "./sections/Skills";
 import Experience from "./sections/Experience";
 import Projects from "./sections/Projects";
 import Competencies from "./sections/Competencies";
+import Availability from "./sections/Availability";
 import Contact from "./sections/Contact";
 
 export default function Home() {
@@ -17,6 +18,7 @@ export default function Home() {
       <Experience />
       <Projects />
       <Competencies />
+      <Availability />
       <Contact />
     </>
   );
