@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { FiSend, FiX } from "react-icons/fi";
-import { HiOutlineSparkles } from "react-icons/hi";
+import { HiOutlineChat } from "react-icons/hi";
 
 type Msg = { role: "bot" | "user"; text: string };
 
@@ -93,14 +93,14 @@ export default function ChatBot() {
         className="fixed bottom-5 right-5 z-[60] grid h-14 w-14 place-items-center rounded-full bg-gradient-to-br from-violet-500 to-cyan-300 text-white text-2xl shadow-lg shadow-violet-500/30 hover:scale-105 transition"
         aria-label="Open AI assistant"
       >
-        {open ? <FiX /> : <HiOutlineSparkles />}
+        {open ? <FiX /> : <HiOutlineChat />}
       </button>
 
       {open && (
         <div className="fixed bottom-24 right-5 z-[60] w-[92vw] max-w-sm bg-white rounded-3xl overflow-hidden flex flex-col shadow-2xl border border-black/5 animate-fade-up">
           <div className="flex items-center gap-3 px-4 py-3 bg-gradient-to-r from-violet-500 to-cyan-300 text-white">
             <div className="grid h-9 w-9 place-items-center rounded-full bg-white/20 text-lg">
-              <HiOutlineSparkles />
+              <HiOutlineChat />
             </div>
             <div>
               <p className="text-sm font-semibold">Suman&apos;s AI Assistant</p>

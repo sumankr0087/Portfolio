@@ -31,8 +31,8 @@ export default function Hero() {
 
           <p className="max-w-xl text-neutral-600 leading-relaxed mb-8 text-[0.95rem]">
             Software Developer with 4+ years of experience building optimised,
-            production-grade web applications — React, Vue &amp; Next.js frontends,
-            Python / Django / FastAPI backends, and intelligent systems powered by
+            production-grade systems — Python, FastAPI &amp; Django backends,
+            React / Vue / Next.js frontends, and intelligent systems powered by
             RAG pipelines, LangChain, LangGraph and agentic AI.
           </p>
 

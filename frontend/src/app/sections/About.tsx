@@ -13,7 +13,7 @@ export default function About() {
             from pixel-perfect interfaces to resilient backend services.
           </p>
           <p>
-            Currently a Developer at <span className="text-violet-600 font-semibold">Double9
+            Currently a Python Developer at <span className="text-violet-600 font-semibold">Double9
             Books</span>, I build web applications and REST APIs with Python,
             Django &amp; FastAPI, craft modern frontends in React, Vue and Next.js,
             and design intelligent systems using LLMs.
