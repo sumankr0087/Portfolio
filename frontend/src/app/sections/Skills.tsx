@@ -1,29 +1,39 @@
 const skills = [
-  { ab: "Re", name: "React" },
-  { ab: "Vu", name: "Vue.js" },
-  { ab: "Nx", name: "Next.js" },
-  { ab: "Ts", name: "TypeScript" },
-  { ab: "Js", name: "JavaScript" },
-  { ab: "Tw", name: "Tailwind" },
+  // Backend
   { ab: "Py", name: "Python" },
   { ab: "Dj", name: "Django" },
   { ab: "Fa", name: "FastAPI" },
+  { ab: "Ap", name: "REST API" },
+  { ab: "Ce", name: "Celery" },
+  { ab: "Rd", name: "Redis" },
   { ab: "Pg", name: "PostgreSQL" },
   { ab: "Mo", name: "MongoDB" },
+  // AI / ML
   { ab: "Ll", name: "LLM / OpenAI" },
   { ab: "Rg", name: "RAG" },
   { ab: "Lc", name: "LangChain" },
   { ab: "Lg", name: "LangGraph" },
   { ab: "Mc", name: "MCP" },
   { ab: "Ag", name: "AI Agents" },
-  { ab: "Ce", name: "Celery" },
-  { ab: "Rd", name: "Redis" },
+  // Web scraping / data
+  { ab: "Ws", name: "Web Scraping" },
+  { ab: "Bs", name: "BeautifulSoup" },
+  { ab: "Se", name: "Selenium" },
+  { ab: "Sc", name: "Scrapy" },
+  { ab: "De", name: "Data Extraction" },
+  // DevOps
   { ab: "Dk", name: "Docker" },
   { ab: "Aw", name: "AWS" },
   { ab: "Ci", name: "CI/CD" },
   { ab: "Ga", name: "GitHub Actions" },
   { ab: "Gi", name: "Git" },
-  { ab: "Ap", name: "REST API" },
+  // Frontend
+  { ab: "Re", name: "React" },
+  { ab: "Vu", name: "Vue.js" },
+  { ab: "Nx", name: "Next.js" },
+  { ab: "Ts", name: "TypeScript" },
+  { ab: "Js", name: "JavaScript" },
+  { ab: "Tw", name: "Tailwind" },
 ];
 
 export default function Skills() {
@@ -32,8 +42,8 @@ export default function Skills() {
       <p className="section-label mb-2">02 · Skills</p>
       <h2 className="font-display text-3xl md:text-4xl font-bold mb-3">Tech Stack</h2>
       <p className="text-neutral-600 max-w-2xl mb-8 text-[0.95rem]">
-        Frontend frameworks, backend systems, databases and the AI tooling I use to
-        build scalable, intelligent products.
+        Backend systems, AI tooling, web scraping and data extraction, DevOps, and
+        frontend frameworks I use to build scalable, intelligent products.
       </p>
 
       <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-3">

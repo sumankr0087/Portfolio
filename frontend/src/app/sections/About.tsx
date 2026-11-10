@@ -8,7 +8,7 @@ export default function About() {
         <div className="lg:col-span-3 card rounded-3xl p-7 space-y-4 text-neutral-700 leading-relaxed text-[0.95rem]">
           <p>
             I&apos;m a <span className="text-neutral-900 font-semibold">Full-Stack
-            Developer &amp; AI / Agentic Engineer</span> with 3+ years of professional
+            Developer &amp; AI / Agentic Engineer</span> with 4+ years of professional
             experience. I love building polished, performant products end to end —
             from pixel-perfect interfaces to resilient backend services.
           </p>

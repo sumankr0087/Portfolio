@@ -10,17 +10,17 @@ const KB: { keywords: string[]; answer: string }[] = [
   {
     keywords: ["who", "about", "yourself", "suman", "bio"],
     answer:
-      "Suman Kumar is a Full-Stack Developer & AI / Agentic Engineer with 3+ years of experience, currently a Developer at Double9 Books, building web apps, LLM products and agentic AI systems.",
+      "Suman Kumar is a Full-Stack Developer & AI / Agentic Engineer with 4+ years of experience, currently a Developer at Double9 Books, building web apps, LLM products and agentic AI systems.",
   },
   {
     keywords: ["experience", "years", "how long", "work history", "job", "company", "double9"],
     answer:
-      "Suman has 3+ years of professional experience and currently works as a Developer at Double9 Books, building full-stack apps and AI-powered features.",
+      "Suman has 4+ years of professional experience and currently works as a Developer at Double9 Books, building full-stack apps and AI-powered features.",
   },
   {
-    keywords: ["skill", "tech", "stack", "technolog", "know", "language", "tools"],
+    keywords: ["skill", "tech", "stack", "technolog", "know", "language", "tools", "scrap", "crawl", "selenium"],
     answer:
-      "Frontend: React, Vue, Next.js, TypeScript, Tailwind. Backend: Python, Django, FastAPI, PostgreSQL, MongoDB. AI: LLMs, RAG, LangChain, LangGraph, MCP and AI Agents.",
+      "Backend: Python, Django, FastAPI, REST APIs, Celery, Redis, PostgreSQL, MongoDB. AI: LLMs, RAG, LangChain, LangGraph, MCP, AI Agents. Web scraping: BeautifulSoup, Selenium, Scrapy, data extraction. DevOps: Docker, AWS, CI/CD, GitHub Actions. Frontend: React, Vue, Next.js, TypeScript, Tailwind.",
   },
   {
     keywords: ["ai", "llm", "rag", "agent", "langchain", "langgraph", "mcp", "agentic"],

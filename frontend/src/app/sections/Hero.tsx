@@ -3,7 +3,7 @@ import { FiArrowRight } from "react-icons/fi";
 const BASE = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
 const stats = [
-  { k: "3+", v: "Years Experience" },
+  { k: "4+", v: "Years Experience" },
   { k: "12+", v: "Projects Built" },
   { k: "AI", v: "RAG & Agents" },
 ];
@@ -30,7 +30,7 @@ export default function Hero() {
           </p>
 
           <p className="max-w-xl text-neutral-600 leading-relaxed mb-8 text-[0.95rem]">
-            Software Developer with 3+ years of experience building optimised,
+            Software Developer with 4+ years of experience building optimised,
             production-grade web applications — React, Vue &amp; Next.js frontends,
             Python / Django / FastAPI backends, and intelligent systems powered by
             RAG pipelines, LangChain, LangGraph and agentic AI.
