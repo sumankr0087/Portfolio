@@ -1,9 +1,12 @@
 import { FiArrowUpRight } from "react-icons/fi";
 
 const offers = [
-  { title: "New Projects", desc: "Full-stack web apps and AI products, built end to end." },
-  { title: "Freelance Work", desc: "Short or long-term contracts, remote-friendly." },
-  { title: "Collaborations", desc: "Teaming up on LLM, RAG and agentic AI ideas." },
+  { title: "Web App Development", desc: "Full-stack web apps with React, Vue, Next.js, Django & FastAPI." },
+  { title: "Mobile App Development", desc: "Responsive, cross-platform mobile experiences." },
+  { title: "AI Agent Projects", desc: "Agentic AI with LangGraph, tool-calling & MCP." },
+  { title: "RAG & LLM Apps", desc: "Retrieval-augmented and LLM-powered products." },
+  { title: "Automation & Scraping", desc: "Data pipelines, web scraping and ETL workflows." },
+  { title: "Freelance & Collaboration", desc: "Short or long-term contracts, remote-friendly." },
 ];
 
 export default function Availability() {
@@ -25,7 +28,7 @@ export default function Availability() {
             let&apos;s create it together.
           </p>
 
-          <div className="grid sm:grid-cols-3 gap-4 mb-8">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
             {offers.map((o) => (
               <div key={o.title} className="rounded-2xl bg-white/10 border border-white/15 p-4">
                 <h3 className="font-display font-semibold mb-1">{o.title}</h3>
