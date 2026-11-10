@@ -48,17 +48,19 @@ export default function Experience() {
         {roles.map((r) => (
           <div key={r.title} className="card rounded-3xl p-6 md:p-7">
             <div className="flex flex-col md:flex-row md:items-start gap-5">
-              <div className="flex items-center gap-4 md:w-52 shrink-0">
-                <span className="font-display font-bold text-white bg-gradient-to-br from-violet-600 to-cyan-400 rounded-2xl h-12 w-12 grid place-items-center shrink-0">
-                  {r.badge}
-                </span>
-                <span className="font-mono text-[0.68rem] tracking-widest text-violet-600 leading-tight">
-                  {r.period}
-                </span>
-              </div>
+              <span className="font-display font-bold text-white bg-gradient-to-br from-violet-600 to-cyan-400 rounded-2xl h-12 w-12 grid place-items-center shrink-0">
+                {r.badge}
+              </span>
               <div className="grow">
-                <h3 className="font-display text-xl font-bold text-neutral-900">{r.title}</h3>
-                <p className="font-mono text-sm text-neutral-500 mb-3">{r.company}</p>
+                <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-1 mb-3">
+                  <div>
+                    <h3 className="font-display text-xl font-bold text-neutral-900">{r.title}</h3>
+                    <p className="font-mono text-sm text-neutral-500">{r.company}</p>
+                  </div>
+                  <span className="font-mono text-[0.68rem] tracking-widest text-violet-600 sm:text-right shrink-0 sm:pt-1">
+                    {r.period}
+                  </span>
+                </div>
                 <ul className="space-y-2 mb-4">
                   {r.points.map((p, i) => (
                     <li key={i} className="flex gap-2.5 text-neutral-600 leading-relaxed text-[0.9rem]">
