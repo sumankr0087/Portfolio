@@ -44,7 +44,7 @@ const KB: { keywords: string[]; answer: string }[] = [
   {
     keywords: ["github", "linkedin", "twitter", "social", "x"],
     answer:
-      "GitHub: github.com/sumankr0087 · LinkedIn: linkedin.com/in/suman-kumar-b0802a185 · X: x.com/SumanKumar865",
+      "GitHub: github.com/sumankr0087 · LinkedIn: linkedin.com/in/itssumankumar · X: x.com/SumanKumar865",
   },
 ];
 
@@ -90,7 +90,7 @@ export default function ChatBot() {
     <>
       <button
         onClick={() => setOpen((v) => !v)}
-        className="fixed bottom-5 right-5 z-[60] grid h-14 w-14 place-items-center rounded-full bg-gradient-to-br from-pink-500 to-orange-300 text-white text-2xl shadow-lg shadow-pink-500/30 hover:scale-105 transition"
+        className="fixed bottom-5 right-5 z-[60] grid h-14 w-14 place-items-center rounded-full bg-gradient-to-br from-violet-500 to-cyan-300 text-white text-2xl shadow-lg shadow-violet-500/30 hover:scale-105 transition"
         aria-label="Open AI assistant"
       >
         {open ? <FiX /> : <HiOutlineSparkles />}
@@ -98,7 +98,7 @@ export default function ChatBot() {
 
       {open && (
         <div className="fixed bottom-24 right-5 z-[60] w-[92vw] max-w-sm bg-white rounded-3xl overflow-hidden flex flex-col shadow-2xl border border-black/5 animate-fade-up">
-          <div className="flex items-center gap-3 px-4 py-3 bg-gradient-to-r from-pink-500 to-orange-300 text-white">
+          <div className="flex items-center gap-3 px-4 py-3 bg-gradient-to-r from-violet-500 to-cyan-300 text-white">
             <div className="grid h-9 w-9 place-items-center rounded-full bg-white/20 text-lg">
               <HiOutlineSparkles />
             </div>
@@ -108,13 +108,13 @@ export default function ChatBot() {
             </div>
           </div>
 
-          <div className="h-80 overflow-y-auto px-4 py-3 space-y-3 bg-[#fdf7f2]">
+          <div className="h-80 overflow-y-auto px-4 py-3 space-y-3 bg-[#f3f4fb]">
             {messages.map((m, i) => (
               <div key={i} className={`flex ${m.role === "user" ? "justify-end" : "justify-start"}`}>
                 <div
                   className={`max-w-[80%] rounded-2xl px-3.5 py-2 text-sm leading-relaxed ${
                     m.role === "user"
-                      ? "bg-pink-500 text-white rounded-br-sm"
+                      ? "bg-violet-500 text-white rounded-br-sm"
                       : "bg-white border border-black/5 text-neutral-700 rounded-bl-sm"
                   }`}
                 >
@@ -126,7 +126,7 @@ export default function ChatBot() {
             {messages.length <= 1 && (
               <div className="flex flex-wrap gap-2 pt-1">
                 {suggestions.map((s) => (
-                  <button key={s} onClick={() => send(s)} className="chip hover:!bg-pink-500/15 transition">
+                  <button key={s} onClick={() => send(s)} className="chip hover:!bg-violet-500/15 transition">
                     {s}
                   </button>
                 ))}
@@ -146,11 +146,11 @@ export default function ChatBot() {
               value={input}
               onChange={(e) => setInput(e.target.value)}
               placeholder="Ask about Suman..."
-              className="flex-1 bg-neutral-100 rounded-full px-4 py-2 text-sm text-neutral-800 placeholder:text-neutral-400 focus:outline-none focus:ring-2 focus:ring-pink-300"
+              className="flex-1 bg-neutral-100 rounded-full px-4 py-2 text-sm text-neutral-800 placeholder:text-neutral-400 focus:outline-none focus:ring-2 focus:ring-violet-300"
             />
             <button
               type="submit"
-              className="grid h-9 w-9 place-items-center rounded-full bg-pink-500 text-white hover:bg-pink-400 transition"
+              className="grid h-9 w-9 place-items-center rounded-full bg-violet-500 text-white hover:bg-violet-400 transition"
               aria-label="Send"
             >
               <FiSend size={16} />

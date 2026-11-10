@@ -64,14 +64,14 @@ function Card({ p }: { p: Project }) {
   return (
     <div className="card rounded-3xl p-6 flex flex-col h-full">
       <div className="flex items-center justify-between mb-4">
-        <span className="font-mono text-[0.68rem] tracking-widest text-pink-600">
+        <span className="font-mono text-[0.68rem] tracking-widest text-violet-600">
           {p.no} · {p.category}
         </span>
         <span className="font-mono text-[0.68rem] text-neutral-400">{p.year}</span>
       </div>
 
       <div className="flex items-center gap-3 mb-3">
-        <span className="font-display font-bold text-white bg-gradient-to-br from-pink-500 to-orange-300 rounded-xl h-11 w-11 grid place-items-center shrink-0">
+        <span className="font-display font-bold text-white bg-gradient-to-br from-violet-500 to-cyan-300 rounded-xl h-11 w-11 grid place-items-center shrink-0">
           {p.badge}
         </span>
         <h3 className="font-display text-lg font-bold text-neutral-900 leading-tight">
@@ -92,7 +92,7 @@ function Card({ p }: { p: Project }) {
           href={p.github}
           target="_blank"
           rel="noreferrer"
-          className="inline-flex items-center gap-1.5 font-mono text-xs text-neutral-800 hover:text-pink-600 transition w-fit"
+          className="inline-flex items-center gap-1.5 font-mono text-xs text-neutral-800 hover:text-violet-600 transition w-fit"
         >
           GitHub <FiArrowUpRight />
         </a>

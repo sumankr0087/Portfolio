@@ -36,7 +36,7 @@ function Header() {
     <header className="fixed top-0 left-0 right-0 z-50 px-4">
       <nav className="mx-auto my-3 max-w-6xl rounded-full bg-white/70 backdrop-blur-md border border-black/5 shadow-sm px-5 py-2.5 flex items-center justify-between">
         <a href="#home" className="font-display font-bold tracking-tight text-lg">
-          SUMAN<span className="text-pink-500">.</span>
+          SUMAN<span className="text-violet-500">.</span>
         </a>
 
         <ul className="hidden lg:flex items-center gap-1 text-sm">
@@ -46,8 +46,8 @@ function Header() {
                 href={l.href}
                 className={`px-3 py-1.5 rounded-full transition-colors ${
                   active === l.href
-                    ? "text-pink-600 font-semibold"
-                    : "text-neutral-600 hover:text-pink-600"
+                    ? "text-violet-600 font-semibold"
+                    : "text-neutral-600 hover:text-violet-600"
                 }`}
               >
                 {l.label}
@@ -77,7 +77,7 @@ function Header() {
               <a
                 href={l.href}
                 onClick={() => setOpen(false)}
-                className="block px-3 py-2.5 text-sm text-neutral-700 hover:text-pink-600"
+                className="block px-3 py-2.5 text-sm text-neutral-700 hover:text-violet-600"
               >
                 {l.label}
               </a>

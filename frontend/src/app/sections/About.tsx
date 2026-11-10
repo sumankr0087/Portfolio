@@ -13,7 +13,7 @@ export default function About() {
             from pixel-perfect interfaces to resilient backend services.
           </p>
           <p>
-            Currently a Developer at <span className="text-pink-600 font-semibold">Double9
+            Currently a Developer at <span className="text-violet-600 font-semibold">Double9
             Books</span>, I build web applications and REST APIs with Python,
             Django &amp; FastAPI, craft modern frontends in React, Vue and Next.js,
             and design intelligent systems using LLMs.
@@ -37,7 +37,7 @@ export default function About() {
               "Clean, maintainable architecture",
             ].map((f) => (
               <li key={f} className="flex items-center gap-3">
-                <span className="h-1.5 w-1.5 rounded-full bg-pink-500" />
+                <span className="h-1.5 w-1.5 rounded-full bg-violet-500" />
                 {f}
               </li>
             ))}

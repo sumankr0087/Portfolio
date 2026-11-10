@@ -6,7 +6,7 @@ const BASE = process.env.NEXT_PUBLIC_BASE_PATH || "";
 const channels = [
   { icon: <FiMail />, label: "Email", value: "sumankrverma87@gmail.com", href: "mailto:sumankrverma87@gmail.com" },
   { icon: <FiPhone />, label: "Phone", value: "+91 70017 69964", href: "tel:+917001769964" },
-  { icon: <FaLinkedinIn />, label: "LinkedIn", value: "in/suman-kumar", href: "https://www.linkedin.com/in/suman-kumar-b0802a185/" },
+  { icon: <FaLinkedinIn />, label: "LinkedIn", value: "in/itssumankumar", href: "https://www.linkedin.com/in/itssumankumar/" },
   { icon: <FaGithub />, label: "GitHub", value: "github.com/sumankr0087", href: "https://github.com/sumankr0087" },
 ];
 
@@ -29,7 +29,7 @@ export default function Contact() {
             rel="noreferrer"
             className="card rounded-2xl p-5 flex items-center gap-4 group"
           >
-            <span className="grid h-11 w-11 place-items-center rounded-full bg-pink-100/70 text-pink-600 text-lg shrink-0">
+            <span className="grid h-11 w-11 place-items-center rounded-full bg-violet-100/70 text-violet-600 text-lg shrink-0">
               {c.icon}
             </span>
             <div className="grow min-w-0">
@@ -38,13 +38,13 @@ export default function Contact() {
               </p>
               <p className="text-neutral-800 text-sm truncate">{c.value}</p>
             </div>
-            <FiArrowUpRight className="text-neutral-400 group-hover:text-pink-500 transition" />
+            <FiArrowUpRight className="text-neutral-400 group-hover:text-violet-500 transition" />
           </a>
         ))}
       </div>
 
       <div className="mt-8 flex flex-wrap items-center gap-4">
-        <a href={`${BASE}/suman_resume.pdf`} download="suman_resume.pdf" className="btn-pink uppercase">
+        <a href={`${BASE}/Suman_kr_resume.pdf`} download="Suman_kr_resume.pdf" className="btn-pink uppercase">
           <FiDownload /> Download Resume
         </a>
         <a

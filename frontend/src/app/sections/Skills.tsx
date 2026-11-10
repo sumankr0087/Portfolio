@@ -16,7 +16,12 @@ const skills = [
   { ab: "Lg", name: "LangGraph" },
   { ab: "Mc", name: "MCP" },
   { ab: "Ag", name: "AI Agents" },
+  { ab: "Ce", name: "Celery" },
+  { ab: "Rd", name: "Redis" },
   { ab: "Dk", name: "Docker" },
+  { ab: "Aw", name: "AWS" },
+  { ab: "Ci", name: "CI/CD" },
+  { ab: "Ga", name: "GitHub Actions" },
   { ab: "Gi", name: "Git" },
   { ab: "Ap", name: "REST API" },
 ];
@@ -37,7 +42,7 @@ export default function Skills() {
             key={s.name}
             className="card rounded-2xl p-4 flex items-center gap-3"
           >
-            <span className="font-display font-bold text-pink-600 bg-pink-100/70 rounded-lg h-9 w-9 grid place-items-center text-sm shrink-0">
+            <span className="font-display font-bold text-violet-600 bg-violet-100/70 rounded-lg h-9 w-9 grid place-items-center text-sm shrink-0">
               {s.ab}
             </span>
             <span className="font-mono text-[0.78rem] text-neutral-700 leading-tight">

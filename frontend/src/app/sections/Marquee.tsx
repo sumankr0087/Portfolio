@@ -7,7 +7,9 @@ const items = [
   "LANGCHAIN & LANGGRAPH",
   "MCP",
   "VECTOR DATABASES",
-  "DOCKER & CI/CD",
+  "CELERY & REDIS",
+  "DOCKER & AWS",
+  "CI/CD & GITHUB ACTIONS",
 ];
 
 export default function Marquee() {
@@ -20,7 +22,7 @@ export default function Marquee() {
             key={i}
             className="font-mono text-xs tracking-widest text-neutral-500 flex items-center gap-8"
           >
-            {t} <span className="text-pink-400">◆</span>
+            {t} <span className="text-violet-400">◆</span>
           </span>
         ))}
       </div>

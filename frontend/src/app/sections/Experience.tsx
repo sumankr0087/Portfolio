@@ -36,10 +36,10 @@ export default function Experience() {
           <div key={r.title} className="card rounded-3xl p-6 md:p-7">
             <div className="flex flex-col md:flex-row md:items-start gap-5">
               <div className="flex items-center gap-4 md:w-56 shrink-0">
-                <span className="font-display font-bold text-white bg-gradient-to-br from-pink-500 to-pink-400 rounded-2xl h-12 w-12 grid place-items-center shrink-0">
+                <span className="font-display font-bold text-white bg-gradient-to-br from-violet-500 to-violet-400 rounded-2xl h-12 w-12 grid place-items-center shrink-0">
                   {r.badge}
                 </span>
-                <span className="font-mono text-[0.68rem] tracking-widest text-pink-600">
+                <span className="font-mono text-[0.68rem] tracking-widest text-violet-600">
                   {r.period}
                 </span>
               </div>
