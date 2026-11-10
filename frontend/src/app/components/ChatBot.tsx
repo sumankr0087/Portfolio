@@ -78,6 +78,22 @@ export default function ChatBot() {
     endRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages, open]);
 
+  // Lock page scroll while the chat is open — only on mobile (< 768px).
+  // On tablet / laptop / desktop the page stays scrollable.
+  useEffect(() => {
+    if (!open) return;
+    const mql = window.matchMedia("(max-width: 767px)");
+    const apply = () => {
+      document.body.style.overflow = mql.matches ? "hidden" : "";
+    };
+    apply();
+    mql.addEventListener("change", apply);
+    return () => {
+      mql.removeEventListener("change", apply);
+      document.body.style.overflow = "";
+    };
+  }, [open]);
+
   function send(text: string) {
     const q = text.trim();
     if (!q) return;
