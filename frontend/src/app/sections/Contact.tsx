@@ -1,4 +1,4 @@
-import { FiMail, FiPhone, FiArrowUpRight, FiDownload } from "react-icons/fi";
+import { FiMail, FiPhone, FiArrowUpRight, FiEye } from "react-icons/fi";
 import { FaGithub, FaLinkedinIn, FaXTwitter } from "react-icons/fa6";
 
 const BASE = process.env.NEXT_PUBLIC_BASE_PATH || "";
@@ -44,8 +44,13 @@ export default function Contact() {
       </div>
 
       <div className="mt-8 flex flex-wrap items-center gap-4">
-        <a href={`${BASE}/Suman_kr_resume.pdf`} download="Suman_kr_resume.pdf" className="btn-pink uppercase">
-          <FiDownload /> Download Resume
+        <a
+          href={`${BASE}/Suman_kr_resume.pdf`}
+          target="_blank"
+          rel="noreferrer"
+          className="btn-pink uppercase"
+        >
+          <FiEye /> View Resume
         </a>
         <a
           href="https://x.com/SumanKumar865"
