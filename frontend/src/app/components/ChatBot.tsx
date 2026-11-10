@@ -35,7 +35,7 @@ const KB: { keywords: string[]; answer: string }[] = [
   {
     keywords: ["contact", "email", "reach", "hire", "phone", "touch", "available", "availability"],
     answer:
-      "Suman is open to full-stack & AI roles and collaborations. Email: sumankrverma87@gmail.com · Phone: +91 70017 69964.",
+      "Suman is open to full-stack & AI roles and collaborations. Email: sumankr0087@gmail.com · Phone: +91 70017 69964.",
   },
   {
     keywords: ["resume", "cv", "download"],

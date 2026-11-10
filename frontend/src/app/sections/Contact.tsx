@@ -4,7 +4,7 @@ import { FaGithub, FaLinkedinIn, FaXTwitter } from "react-icons/fa6";
 const BASE = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
 const channels = [
-  { icon: <FiMail />, label: "Email", value: "sumankrverma87@gmail.com", href: "mailto:sumankrverma87@gmail.com" },
+  { icon: <FiMail />, label: "Email", value: "sumankr0087@gmail.com", href: "mailto:sumankr0087@gmail.com" },
   { icon: <FiPhone />, label: "Phone", value: "+91 70017 69964", href: "tel:+917001769964" },
   { icon: <FaLinkedinIn />, label: "LinkedIn", value: "in/itssumankumar", href: "https://www.linkedin.com/in/itssumankumar/" },
   { icon: <FaGithub />, label: "GitHub", value: "github.com/sumankr0087", href: "https://github.com/sumankr0087" },
