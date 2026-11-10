@@ -56,7 +56,7 @@ function Header() {
         </ul>
 
         <div className="flex items-center gap-2">
-          <a href="#contact" className="hidden sm:inline-flex btn-pink !py-2 !px-4 uppercase">
+          <a href="#contact" className="btn-pink !py-1.5 !px-3 sm:!px-4 uppercase text-[0.68rem] sm:text-[0.78rem] whitespace-nowrap">
             Get in touch
           </a>
           <button
@@ -82,15 +82,6 @@ function Header() {
               </a>
             </li>
           ))}
-          <li className="mt-2 mb-1 px-1">
-            <a
-              href="#contact"
-              onClick={() => setOpen(false)}
-              className="btn-pink uppercase w-full justify-center"
-            >
-              Get in touch
-            </a>
-          </li>
         </ul>
       )}
     </header>
