@@ -1,15 +1,23 @@
-import Introduction from "./components/Introduction";
-import TechStack from "./tech-stack/page";
-import Project from "./project/page";
-import Contact from "./contact/page";
+import Hero from "./sections/Hero";
+import Marquee from "./sections/Marquee";
+import About from "./sections/About";
+import Skills from "./sections/Skills";
+import Experience from "./sections/Experience";
+import Projects from "./sections/Projects";
+import Competencies from "./sections/Competencies";
+import Contact from "./sections/Contact";
 
 export default function Home() {
   return (
-    <div className="w-screen">
-      <Introduction />
-      <TechStack />
-      <Project />
+    <>
+      <Hero />
+      <Marquee />
+      <About />
+      <Skills />
+      <Experience />
+      <Projects />
+      <Competencies />
       <Contact />
-    </div>
+    </>
   );
 }

@@ -3,25 +3,147 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 17, 24, 39;
-  --background-end-rgb: 17, 24, 39;
+  --cream: #fdf7f2;
+  --cream-2: #fbeee6;
+  --ink: #1b1b1f;
+  --muted: #6b6b73;
+  --pink: #ec4899;
+  --pink-2: #f9a8d4;
+  --peach: #fed7aa;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 17, 24, 39;
-    --background-end-rgb: 17, 24, 39;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  color: var(--ink);
+  background: var(--cream);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
 }
+
+/* Warm ambient gradient wash */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background:
+    radial-gradient(55rem 40rem at 85% -5%, rgba(249, 168, 212, 0.45), transparent 55%),
+    radial-gradient(45rem 35rem at 0% 0%, rgba(254, 215, 170, 0.5), transparent 50%),
+    radial-gradient(50rem 50rem at 50% 115%, rgba(236, 72, 153, 0.1), transparent 60%);
+  pointer-events: none;
+}
+
+@layer base {
+  .font-display {
+    font-family: var(--font-display), system-ui, sans-serif;
+  }
+  .font-mono {
+    font-family: var(--font-mono), ui-monospace, monospace;
+  }
+}
+
+@layer components {
+  .card {
+    background: rgba(255, 255, 255, 0.65);
+    border: 1px solid rgba(27, 27, 31, 0.08);
+    backdrop-filter: blur(8px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  }
+  .card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(236, 72, 153, 0.35);
+    box-shadow: 0 24px 50px -24px rgba(236, 72, 153, 0.45);
+  }
+
+  .btn-pink {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    border-radius: 9999px;
+    padding: 0.7rem 1.4rem;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    color: #fff;
+    background: linear-gradient(90deg, #ec4899, #f472b6);
+    box-shadow: 0 10px 24px -10px rgba(236, 72, 153, 0.7);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .btn-pink:hover {
+    transform: translateY(-2px);
+  }
+
+  .btn-ghost {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    border-radius: 9999px;
+    padding: 0.7rem 1.4rem;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    color: var(--ink);
+    background: #fff;
+    border: 1px solid rgba(27, 27, 31, 0.12);
+    transition: transform 0.2s ease, border-color 0.2s ease;
+  }
+  .btn-ghost:hover {
+    transform: translateY(-2px);
+    border-color: var(--pink);
+  }
+
+  .chip {
+    display: inline-flex;
+    align-items: center;
+    font-family: var(--font-mono), monospace;
+    font-size: 0.68rem;
+    letter-spacing: 0.03em;
+    padding: 0.28rem 0.7rem;
+    border-radius: 9999px;
+    background: rgba(236, 72, 153, 0.08);
+    border: 1px solid rgba(236, 72, 153, 0.25);
+    color: #be3d7f;
+    white-space: nowrap;
+  }
+
+  .section-label {
+    font-family: var(--font-mono), monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.22em;
+    color: var(--pink);
+    text-transform: uppercase;
+  }
+
+  .pink-text {
+    background: linear-gradient(90deg, #ec4899, #db2777);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+}
+
+/* Marquee */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee 28s linear infinite;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-up { animation: fadeUp 0.6s ease both; }
+
+@keyframes floaty {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+.animate-floaty { animation: floaty 5s ease-in-out infinite; }
