@@ -74,11 +74,14 @@ export default function Skills() {
         DevOps, and frontend frameworks I use to build scalable, intelligent products.
       </p>
 
-      <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-3">
+      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3">
         {skills.map((s) => {
           const Icon = s.Icon;
           return (
-            <div key={s.name} className="card rounded-2xl p-4 flex items-center gap-3">
+            <div
+              key={s.name}
+              className="card rounded-2xl p-3.5 flex items-center gap-3 min-h-[3.75rem]"
+            >
               <span className="grid h-9 w-9 place-items-center rounded-lg bg-white border border-black/5 shrink-0">
                 {Icon ? (
                   <Icon size={20} color={s.color} />
@@ -86,7 +89,7 @@ export default function Skills() {
                   <span className="font-display font-bold text-violet-600 text-sm">{s.ab}</span>
                 )}
               </span>
-              <span className="font-mono text-[0.78rem] text-neutral-700 leading-tight">
+              <span className="font-mono text-[0.76rem] text-neutral-700 leading-snug">
                 {s.name}
               </span>
             </div>
