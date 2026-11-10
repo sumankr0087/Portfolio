@@ -12,7 +12,7 @@ const channels = [
 
 export default function Contact() {
   return (
-    <section id="contact" className="mx-auto max-w-6xl px-6 py-20">
+    <section id="contact" className="mx-auto max-w-6xl px-6 pt-20 pb-8">
       <p className="section-label mb-2">06 · Contact</p>
       <h2 className="font-display text-3xl md:text-4xl font-bold mb-3">Let&apos;s Connect</h2>
       <p className="text-neutral-600 max-w-2xl mb-8 text-[0.95rem]">
@@ -57,9 +57,9 @@ export default function Contact() {
         </a>
       </div>
 
-      <footer className="mt-20 pt-8 border-t border-black/10 text-center">
-        <p className="font-mono text-xs text-neutral-500">
-          Designed &amp; built by Suman Kumar · © {new Date().getFullYear()}
+      <footer className="mt-10 pt-4 border-t border-black/10 text-center">
+        <p className="font-mono text-[0.7rem] text-neutral-400">
+          © {new Date().getFullYear()} Suman Kumar
         </p>
       </footer>
     </section>
