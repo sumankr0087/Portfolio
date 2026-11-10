@@ -1,41 +1,67 @@
-const skills = [
+import type { IconType } from "react-icons";
+import {
+  SiPython,
+  SiDjango,
+  SiFastapi,
+  SiCelery,
+  SiRedis,
+  SiPostgresql,
+  SiMongodb,
+  SiOpenai,
+  SiSelenium,
+  SiScrapy,
+  SiDocker,
+  SiAmazonaws,
+  SiGithubactions,
+  SiGit,
+  SiReact,
+  SiVuedotjs,
+  SiNextdotjs,
+  SiTypescript,
+  SiJavascript,
+  SiTailwindcss,
+} from "react-icons/si";
+
+type Skill = { ab: string; name: string; Icon?: IconType; color?: string };
+
+const skills: Skill[] = [
   // Backend
-  { ab: "Py", name: "Python" },
-  { ab: "Dj", name: "Django" },
-  { ab: "Fa", name: "FastAPI" },
+  { ab: "Py", name: "Python", Icon: SiPython, color: "#3776AB" },
+  { ab: "Dj", name: "Django", Icon: SiDjango, color: "#0C8F5A" },
+  { ab: "Fa", name: "FastAPI", Icon: SiFastapi, color: "#009688" },
   { ab: "Ap", name: "REST API" },
-  { ab: "Ce", name: "Celery" },
-  { ab: "Rd", name: "Redis" },
-  { ab: "Pg", name: "PostgreSQL" },
-  { ab: "Mo", name: "MongoDB" },
+  { ab: "Ce", name: "Celery", Icon: SiCelery, color: "#37814A" },
+  { ab: "Rd", name: "Redis", Icon: SiRedis, color: "#FF4438" },
+  { ab: "Pg", name: "PostgreSQL", Icon: SiPostgresql, color: "#4169E1" },
+  { ab: "Mo", name: "MongoDB", Icon: SiMongodb, color: "#47A248" },
   // AI / ML
-  { ab: "Ll", name: "LLM / OpenAI" },
+  { ab: "Ll", name: "LLM / OpenAI", Icon: SiOpenai, color: "#412991" },
   { ab: "Rg", name: "RAG" },
   { ab: "Lc", name: "LangChain" },
   { ab: "Lg", name: "LangGraph" },
   { ab: "Mc", name: "MCP" },
   { ab: "Ag", name: "AI Agents" },
-  // Web scraping / data
+  // Web scraping / data / automation
   { ab: "Ws", name: "Web Scraping" },
   { ab: "Bs", name: "BeautifulSoup" },
-  { ab: "Se", name: "Selenium" },
-  { ab: "Sc", name: "Scrapy" },
+  { ab: "Se", name: "Selenium", Icon: SiSelenium, color: "#43B02A" },
+  { ab: "Sc", name: "Scrapy", Icon: SiScrapy, color: "#60A839" },
   { ab: "De", name: "Data Extraction" },
   { ab: "Au", name: "Automation" },
   { ab: "Et", name: "ETL Pipelines" },
   // DevOps
-  { ab: "Dk", name: "Docker" },
-  { ab: "Aw", name: "AWS" },
+  { ab: "Dk", name: "Docker", Icon: SiDocker, color: "#2496ED" },
+  { ab: "Aw", name: "AWS", Icon: SiAmazonaws, color: "#FF9900" },
   { ab: "Ci", name: "CI/CD" },
-  { ab: "Ga", name: "GitHub Actions" },
-  { ab: "Gi", name: "Git" },
+  { ab: "Ga", name: "GitHub Actions", Icon: SiGithubactions, color: "#2088FF" },
+  { ab: "Gi", name: "Git", Icon: SiGit, color: "#F05032" },
   // Frontend
-  { ab: "Re", name: "React" },
-  { ab: "Vu", name: "Vue.js" },
-  { ab: "Nx", name: "Next.js" },
-  { ab: "Ts", name: "TypeScript" },
-  { ab: "Js", name: "JavaScript" },
-  { ab: "Tw", name: "Tailwind" },
+  { ab: "Re", name: "React", Icon: SiReact, color: "#149ECA" },
+  { ab: "Vu", name: "Vue.js", Icon: SiVuedotjs, color: "#42B883" },
+  { ab: "Nx", name: "Next.js", Icon: SiNextdotjs, color: "#111111" },
+  { ab: "Ts", name: "TypeScript", Icon: SiTypescript, color: "#3178C6" },
+  { ab: "Js", name: "JavaScript", Icon: SiJavascript, color: "#C9A800" },
+  { ab: "Tw", name: "Tailwind", Icon: SiTailwindcss, color: "#38BDF8" },
 ];
 
 export default function Skills() {
@@ -49,19 +75,23 @@ export default function Skills() {
       </p>
 
       <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-3">
-        {skills.map((s) => (
-          <div
-            key={s.name}
-            className="card rounded-2xl p-4 flex items-center gap-3"
-          >
-            <span className="font-display font-bold text-violet-600 bg-violet-100/70 rounded-lg h-9 w-9 grid place-items-center text-sm shrink-0">
-              {s.ab}
-            </span>
-            <span className="font-mono text-[0.78rem] text-neutral-700 leading-tight">
-              {s.name}
-            </span>
-          </div>
-        ))}
+        {skills.map((s) => {
+          const Icon = s.Icon;
+          return (
+            <div key={s.name} className="card rounded-2xl p-4 flex items-center gap-3">
+              <span className="grid h-9 w-9 place-items-center rounded-lg bg-white border border-black/5 shrink-0">
+                {Icon ? (
+                  <Icon size={20} color={s.color} />
+                ) : (
+                  <span className="font-display font-bold text-violet-600 text-sm">{s.ab}</span>
+                )}
+              </span>
+              <span className="font-mono text-[0.78rem] text-neutral-700 leading-tight">
+                {s.name}
+              </span>
+            </div>
+          );
+        })}
       </div>
     </section>
   );
