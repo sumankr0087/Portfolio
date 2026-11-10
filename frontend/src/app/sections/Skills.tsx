@@ -66,7 +66,7 @@ const skills: Skill[] = [
 
 export default function Skills() {
   return (
-    <section id="skills" className="mx-auto max-w-6xl px-6 py-20">
+    <section id="skills" className="mx-auto max-w-6xl px-6 py-10">
       <p className="section-label mb-2">02 · Skills</p>
       <h2 className="font-display text-3xl md:text-4xl font-bold mb-3">Tech Stack</h2>
       <p className="text-neutral-600 max-w-2xl mb-8 text-[0.95rem]">

@@ -107,7 +107,7 @@ function Card({ p }: { p: Project }) {
 
 export default function Projects() {
   return (
-    <section id="projects" className="mx-auto max-w-6xl px-6 py-20">
+    <section id="projects" className="mx-auto max-w-6xl px-6 py-10">
       <p className="section-label mb-2">04 · Projects</p>
       <h2 className="font-display text-3xl md:text-4xl font-bold mb-8">Featured Work</h2>
 

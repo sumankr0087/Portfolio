@@ -17,7 +17,7 @@ const items = [
 
 export default function Competencies() {
   return (
-    <section className="mx-auto max-w-6xl px-6 py-20">
+    <section className="mx-auto max-w-6xl px-6 py-10">
       <p className="section-label mb-2">05 · Core Competencies</p>
       <h2 className="font-display text-3xl md:text-4xl font-bold mb-8">Beyond the Code</h2>
 
