@@ -57,16 +57,6 @@ export default function Hero() {
                 className="h-full w-full rounded-full object-cover"
               />
             </div>
-
-            <span className="absolute -top-2 -right-2 md:right-2 bg-white shadow-md rounded-full px-3 py-1.5 text-xs font-mono flex items-center gap-2 animate-floaty">
-              <span className="h-1.5 w-1.5 rounded-full bg-violet-500" /> Double9 Books
-            </span>
-            <span
-              className="absolute bottom-6 -left-2 md:-left-6 bg-white shadow-md rounded-full px-3 py-1.5 text-xs font-mono flex items-center gap-2 animate-floaty"
-              style={{ animationDelay: "1.2s" }}
-            >
-              <span className="h-1.5 w-1.5 rounded-full bg-cyan-400" /> AI &amp; Full-Stack
-            </span>
           </div>
         </div>
       </div>
