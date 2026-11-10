@@ -8,7 +8,6 @@ const links = [
   { href: "#skills", label: "Skills" },
   { href: "#experience", label: "Experience" },
   { href: "#projects", label: "Projects" },
-  { href: "#contact", label: "Contact" },
 ];
 
 function Header() {

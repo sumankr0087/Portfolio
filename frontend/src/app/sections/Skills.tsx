@@ -21,6 +21,8 @@ const skills = [
   { ab: "Se", name: "Selenium" },
   { ab: "Sc", name: "Scrapy" },
   { ab: "De", name: "Data Extraction" },
+  { ab: "Au", name: "Automation" },
+  { ab: "Et", name: "ETL Pipelines" },
   // DevOps
   { ab: "Dk", name: "Docker" },
   { ab: "Aw", name: "AWS" },
@@ -42,8 +44,8 @@ export default function Skills() {
       <p className="section-label mb-2">02 · Skills</p>
       <h2 className="font-display text-3xl md:text-4xl font-bold mb-3">Tech Stack</h2>
       <p className="text-neutral-600 max-w-2xl mb-8 text-[0.95rem]">
-        Backend systems, AI tooling, web scraping and data extraction, DevOps, and
-        frontend frameworks I use to build scalable, intelligent products.
+        Backend systems, AI tooling, web scraping, data extraction and automation,
+        DevOps, and frontend frameworks I use to build scalable, intelligent products.
       </p>
 
       <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-3">

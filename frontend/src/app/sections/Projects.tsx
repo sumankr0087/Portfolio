@@ -116,6 +116,17 @@ export default function Projects() {
           <Card key={p.no} p={p} />
         ))}
       </div>
+
+      <div className="mt-10 flex justify-center">
+        <a
+          href="https://github.com/sumankr0087?tab=repositories"
+          target="_blank"
+          rel="noreferrer"
+          className="btn-ghost uppercase"
+        >
+          More Projects <FiArrowUpRight />
+        </a>
+      </div>
     </section>
   );
 }
