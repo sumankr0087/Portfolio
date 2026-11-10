@@ -82,6 +82,15 @@ function Header() {
               </a>
             </li>
           ))}
+          <li className="mt-2 mb-1 px-1">
+            <a
+              href="#contact"
+              onClick={() => setOpen(false)}
+              className="btn-pink uppercase w-full justify-center"
+            >
+              Get in touch
+            </a>
+          </li>
         </ul>
       )}
     </header>
