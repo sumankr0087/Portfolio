@@ -27,23 +27,36 @@ export const CHUNKS: Chunk[] = [
   // ---- Current role / experience ----
   {
     topic: "current-role",
-    aliases: ["where", "currently", "working", "current", "now", "present", "job", "employer", "company", "double9", "based", "location"],
+    aliases: [
+      "currently working", "current company", "current role", "current job", "present company",
+      "work for", "works for", "where does he work", "where is he working", "working now",
+      "currently", "current", "now", "present", "double9", "based", "location",
+    ],
     text: "Suman currently works as a Python Developer at Double9 Books (Noida), since March 2026. There he builds high-performance FastAPI & Django REST APIs with JWT auth and async endpoints, architects microservices-based backend modules in Docker, builds LLM automation with LangChain and RAG pipelines, designs multi-agent workflows with LangGraph, builds MCP servers, and builds Python data pipelines (Pandas, BeautifulSoup, Selenium) that process 5,000+ records and cut manual effort by 60%.",
   },
   {
     topic: "experience-essentia",
-    aliases: ["experience", "previous", "past", "history", "essentia", "softserv", "sde", "software development engineer", "years"],
-    text: "Before Double9 Books, Suman was a Software Development Engineer at Essentia SoftServ LLP (Delhi), from July 2022 to February 2026. He developed 15+ scalable Django REST APIs for B2B platforms with ReactJs & VueJs frontends, built reusable React/Vue/Nuxt components, implemented JWT auth and RBAC, optimized PostgreSQL and MySQL queries, and worked in Git-based CI/CD agile teams across 25+ sprints — improving performance by up to 40%.",
+    aliases: [
+      "previous company", "previously working", "last company", "worked before", "before double9",
+      "previous", "previously", "past", "earlier", "prior", "formerly", "ex",
+      "essentia", "softserv", "sde", "software development engineer", "company", "worked",
+    ],
+    text: "Before Double9 Books, Suman previously worked as a Software Development Engineer at Essentia SoftServ LLP (Delhi), from July 2022 to February 2026. He developed 15+ scalable Django REST APIs for B2B platforms with ReactJs & VueJs frontends, built reusable React/Vue/Nuxt components, implemented JWT auth and RBAC, optimized PostgreSQL and MySQL queries, and worked in Git-based CI/CD agile teams across 25+ sprints — improving performance by up to 40%.",
   },
   {
     topic: "experience-righto",
-    aliases: ["intern", "internship", "righto", "first job", "frontend intern"],
-    text: "Suman started as a Frontend Developer Intern at RightO (July–October 2020), building responsive pages and reusable UI components from design mockups and integrating REST APIs with backend developers.",
+    aliases: ["intern", "internship", "righto", "first job", "first company", "started career", "frontend intern"],
+    text: "Suman started his career as a Frontend Developer Intern at RightO (July–October 2020), building responsive pages and reusable UI components from design mockups and integrating REST APIs with backend developers.",
   },
   {
     topic: "experience-overview",
-    aliases: ["experience", "how long", "years", "work history", "career", "total experience"],
-    text: "Suman has 4+ years of professional experience across three roles: Python Developer at Double9 Books (2026–present), Software Development Engineer at Essentia SoftServ LLP (2022–2026), and Frontend Developer Intern at RightO (2020).",
+    aliases: [
+      "how many companies", "how many company", "number of companies", "companies worked",
+      "how many jobs", "how many roles", "where has he worked", "work history", "total experience",
+      "experience", "how long", "years", "career", "companies", "company", "worked", "jobs",
+      "roles", "organizations", "organisations", "firms", "employers", "many",
+    ],
+    text: "Suman has 4+ years of professional experience across three companies / roles: 1) Python Developer at Double9 Books (2026–present), 2) Software Development Engineer at Essentia SoftServ LLP (2022–2026), and 3) Frontend Developer Intern at RightO (2020). So he has worked at three companies so far.",
   },
 
   // ---- Skills ----
@@ -146,6 +159,9 @@ export function answerQuestion(question: string): string {
   if (qTokens.length === 0) return FALLBACK;
   // Unique query tokens.
   const uniqueTokens = Array.from(new Set(qTokens));
+  // Raw question, normalized and space-padded, for verbatim phrase matching
+  // (keeps stopwords so phrases like "how many company" can match).
+  const rawNorm = " " + question.toLowerCase().replace(/[^a-z0-9+#./ ]/g, " ").replace(/\s+/g, " ").trim() + " ";
 
   let best: { score: number; text: string } | null = null;
 
@@ -159,10 +175,9 @@ export function answerQuestion(question: string): string {
       if (aliasText.includes(token)) score += 3;
       else if (haystack.includes(token)) score += 1;
     }
-    // Reward multi-word alias phrases that appear verbatim in the question.
-    const qLower = " " + qTokens.join(" ") + " ";
+    // Reward multi-word alias phrases that appear verbatim in the raw question.
     for (const alias of chunk.aliases ?? []) {
-      if (alias.includes(" ") && qLower.includes(" " + alias + " ")) score += 4;
+      if (alias.includes(" ") && rawNorm.includes(" " + alias + " ")) score += 5;
     }
 
     if (score > 0 && (!best || score > best.score)) best = { score, text: chunk.text };
