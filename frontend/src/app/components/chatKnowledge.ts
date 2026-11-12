@@ -92,7 +92,12 @@ export const CHUNKS: Chunk[] = [
   {
     topic: "projects-overview",
     aliases: ["project", "projects", "built", "portfolio", "featured", "work", "made", "created"],
-    text: "Featured projects: Context Vault (RAG system, open-source), AutoPilot (multi-agent orchestrator), DocuMind (AI document Q&A SaaS), DevConnect (developer social platform) and ShopSphere (e-commerce engine with AI recommendations). Ask about any one for details.",
+    text: "Featured projects: Autonomous Data Scientist (multi-agent AI business analyst, live demo), Context Vault (RAG system, open-source), AutoPilot (multi-agent orchestrator), DocuMind (AI document Q&A SaaS), DevConnect (developer social platform) and ShopSphere (e-commerce engine with AI recommendations). Ask about any one for details.",
+  },
+  {
+    topic: "project-autonomous-data-scientist",
+    aliases: ["autonomous data scientist", "data scientist", "business analyst", "ai business analyst", "sql", "eda", "data science", "analytics", "report", "charts", "multi-agent", "latest project", "newest project", "live demo"],
+    text: "Autonomous Data Scientist (AI Business Analyst) is Suman's latest project — a multi-agent AI system that turns a plain-English business question into a full data-science workflow: it generates SQL, runs exploratory analysis, trains ML models, draws charts and writes an executive report, with no code written by the user. Built with LangGraph, LangChain, Google Gemini, FastAPI, DuckDB, scikit-learn and Next.js. Live demo: sumankr0087.github.io/autonomous-data-scientist · Code: github.com/sumankr0087/autonomous-data-scientist",
   },
   {
     topic: "project-context-vault",

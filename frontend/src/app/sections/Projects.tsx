@@ -1,4 +1,6 @@
-import { FiArrowUpRight, FiLock } from "react-icons/fi";
+import { FiArrowUpRight, FiLock, FiExternalLink, FiGithub } from "react-icons/fi";
+
+const BASE = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
 type Project = {
   no: string;
@@ -9,11 +11,25 @@ type Project = {
   desc: string;
   tags: string[];
   github?: string;
+  live?: string;
+  image?: string;
 };
 
 const projects: Project[] = [
   {
     no: "01",
+    category: "AGENTIC AI · DATA SCIENCE",
+    year: "2026",
+    badge: "DS",
+    title: "Autonomous Data Scientist — AI Business Analyst",
+    desc: "A multi-agent AI system that turns a plain-English business question into a full data-science workflow — generating SQL, running EDA, training ML models, drawing charts and writing an executive report, without the user writing any SQL, Python or ML code.",
+    tags: ["LangGraph", "LangChain", "Gemini", "FastAPI", "DuckDB", "Next.js"],
+    github: "https://github.com/sumankr0087/autonomous-data-scientist",
+    live: "https://sumankr0087.github.io/autonomous-data-scientist/",
+    image: `${BASE}/projects/ai-business-analyst.png`,
+  },
+  {
+    no: "02",
     category: "AI / RAG",
     year: "2026",
     badge: "CV",
@@ -23,7 +39,7 @@ const projects: Project[] = [
     github: "https://github.com/sumankr0087/context-vault-rag",
   },
   {
-    no: "02",
+    no: "03",
     category: "AGENTIC AI",
     year: "2026",
     badge: "AP",
@@ -32,7 +48,7 @@ const projects: Project[] = [
     tags: ["LangGraph", "Python", "Next.js", "Tool Calling"],
   },
   {
-    no: "03",
+    no: "04",
     category: "LLM SAAS",
     year: "2026",
     badge: "DM",
@@ -41,7 +57,7 @@ const projects: Project[] = [
     tags: ["Next.js", "FastAPI", "PostgreSQL", "OpenAI"],
   },
   {
-    no: "04",
+    no: "05",
     category: "FULL STACK",
     year: "2025",
     badge: "DC",
@@ -50,7 +66,7 @@ const projects: Project[] = [
     tags: ["React", "Node.js", "MongoDB", "WebSockets"],
   },
   {
-    no: "05",
+    no: "06",
     category: "FULL STACK",
     year: "2025",
     badge: "SS",
@@ -70,6 +86,23 @@ function Card({ p }: { p: Project }) {
         <span className="font-mono text-[0.68rem] text-neutral-400">{p.year}</span>
       </div>
 
+      {p.image && (
+        <a
+          href={p.live || p.github}
+          target="_blank"
+          rel="noreferrer"
+          className="block mb-4 overflow-hidden rounded-2xl border border-black/5 group/img"
+        >
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src={p.image}
+            alt={`${p.title} screenshot`}
+            loading="lazy"
+            className="w-full h-44 object-cover object-top transition duration-500 group-hover/img:scale-[1.03]"
+          />
+        </a>
+      )}
+
       <div className="flex items-center gap-3 mb-3">
         <span className="font-display font-bold text-white bg-gradient-to-br from-violet-500 to-cyan-300 rounded-xl h-11 w-11 grid place-items-center shrink-0">
           {p.badge}
@@ -87,20 +120,34 @@ function Card({ p }: { p: Project }) {
         ))}
       </div>
 
-      {p.github ? (
-        <a
-          href={p.github}
-          target="_blank"
-          rel="noreferrer"
-          className="inline-flex items-center gap-1.5 font-mono text-xs text-neutral-800 hover:text-violet-600 transition w-fit"
-        >
-          GitHub <FiArrowUpRight />
-        </a>
-      ) : (
-        <span className="inline-flex items-center gap-1.5 font-mono text-xs text-neutral-400 w-fit">
-          <FiLock size={12} /> Private project
-        </span>
-      )}
+      <div className="flex flex-wrap items-center gap-4">
+        {p.live && (
+          <a
+            href={p.live}
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center gap-1.5 font-mono text-xs font-semibold text-violet-600 hover:text-violet-500 transition w-fit"
+          >
+            <FiExternalLink size={13} /> Live Demo
+          </a>
+        )}
+        {p.github ? (
+          <a
+            href={p.github}
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center gap-1.5 font-mono text-xs text-neutral-800 hover:text-violet-600 transition w-fit"
+          >
+            <FiGithub size={13} /> GitHub <FiArrowUpRight />
+          </a>
+        ) : (
+          !p.live && (
+            <span className="inline-flex items-center gap-1.5 font-mono text-xs text-neutral-400 w-fit">
+              <FiLock size={12} /> Private project
+            </span>
+          )
+        )}
+      </div>
     </div>
   );
 }
