@@ -138,17 +138,15 @@ export default function ChatBot() {
                 </div>
               </div>
             ))}
-
-            {messages.length <= 1 && (
-              <div className="flex flex-wrap gap-2 pt-1">
-                {suggestions.map((s) => (
-                  <button key={s} onClick={() => send(s)} className="chip hover:!bg-violet-500/15 transition">
-                    {s}
-                  </button>
-                ))}
-              </div>
-            )}
             <div ref={endRef} />
+          </div>
+
+          <div className="flex flex-wrap gap-2 px-3 pt-3 pb-1 bg-white border-t border-black/5">
+            {suggestions.map((s) => (
+              <button key={s} onClick={() => send(s)} className="chip hover:!bg-violet-500/15 transition">
+                {s}
+              </button>
+            ))}
           </div>
 
           <form
@@ -156,7 +154,7 @@ export default function ChatBot() {
               e.preventDefault();
               send(input);
             }}
-            className="flex items-center gap-2 p-3 border-t border-black/5 bg-white"
+            className="flex items-center gap-2 p-3 bg-white"
           >
             <input
               value={input}
