@@ -3,68 +3,9 @@
 import { useEffect, useRef, useState } from "react";
 import { FiSend, FiX } from "react-icons/fi";
 import { HiOutlineChat } from "react-icons/hi";
+import { answerQuestion } from "./chatKnowledge";
 
 type Msg = { role: "bot" | "user"; text: string };
-
-const KB: { keywords: string[]; answer: string }[] = [
-  {
-    keywords: ["who", "about", "yourself", "suman", "bio"],
-    answer:
-      "Suman Kumar is a Full-Stack Developer & AI / Agentic Engineer with 4+ years of experience, currently a Developer at Double9 Books, building web apps, LLM products and agentic AI systems.",
-  },
-  {
-    keywords: ["experience", "years", "how long", "work history", "job", "company", "double9"],
-    answer:
-      "Suman has 4+ years of professional experience and currently works as a Developer at Double9 Books, building full-stack apps and AI-powered features.",
-  },
-  {
-    keywords: ["skill", "tech", "stack", "technolog", "know", "language", "tools", "scrap", "crawl", "selenium"],
-    answer:
-      "Backend: Python, Django, FastAPI, REST APIs, Celery, Redis, PostgreSQL, MongoDB. AI: LLMs, RAG, LangChain, LangGraph, MCP, AI Agents. Web scraping: BeautifulSoup, Selenium, Scrapy, data extraction. DevOps: Docker, AWS, CI/CD, GitHub Actions. Frontend: React, Vue, Next.js, TypeScript, Tailwind.",
-  },
-  {
-    keywords: ["ai", "llm", "rag", "agent", "langchain", "langgraph", "mcp", "agentic"],
-    answer:
-      "Suman builds RAG pipelines, LLM apps and agentic systems using LangChain, LangGraph, MCP and vector databases — for example the open-source Context Vault RAG project.",
-  },
-  {
-    keywords: ["service", "services", "offer", "provide", "help with", "do you do", "freelance", "hire for", "work with"],
-    answer:
-      "Suman offers three main services: 1) Web & Mobile App Development — end-to-end full-stack web and cross-platform mobile apps (React, Vue, Next.js frontends with Python, Django & FastAPI APIs). 2) AI Agent & LLM Projects — RAG pipelines, agentic workflows and tool-calling assistants with LangChain, LangGraph & MCP. 3) Freelance & Collaboration — remote-friendly short or long-term contracts, shipping reliable, maintainable products on time.",
-  },
-  {
-    keywords: ["project", "built", "portfolio", "context", "vault", "featured"],
-    answer:
-      "Featured projects: Context Vault (RAG system, open-source on GitHub), AutoPilot multi-agent orchestrator, DocuMind AI document Q&A, DevConnect and ShopSphere. See the Projects section for details.",
-  },
-  {
-    keywords: ["contact", "email", "reach", "hire", "phone", "touch", "available", "availability"],
-    answer:
-      "Suman is open to full-stack & AI roles and collaborations. Email: sumankr0087@gmail.com · Phone: +91 70017 69964.",
-  },
-  {
-    keywords: ["resume", "cv", "download"],
-    answer: "You can download Suman's resume from the button in the Contact section.",
-  },
-  {
-    keywords: ["github", "linkedin", "twitter", "social", "x"],
-    answer:
-      "GitHub: github.com/sumankr0087 · LinkedIn: linkedin.com/in/itssumankumar · X: x.com/SumanKumar865",
-  },
-];
-
-function findAnswer(q: string): string {
-  const text = q.toLowerCase();
-  let best: { score: number; answer: string } | null = null;
-  for (const item of KB) {
-    const score = item.keywords.reduce((s, k) => (text.includes(k) ? s + 1 : s), 0);
-    if (score > 0 && (!best || score > best.score)) best = { score, answer: item.answer };
-  }
-  return (
-    best?.answer ??
-    "I can tell you about Suman's experience, skills, projects, AI work, or how to get in touch. Try asking about any of those!"
-  );
-}
 
 const suggestions = ["Skills", "Services", "Projects", "AI work", "Availability"];
 
@@ -104,7 +45,7 @@ export default function ChatBot() {
     if (!q) return;
     setMessages((m) => [...m, { role: "user", text: q }]);
     setInput("");
-    setTimeout(() => setMessages((m) => [...m, { role: "bot", text: findAnswer(q) }]), 350);
+    setTimeout(() => setMessages((m) => [...m, { role: "bot", text: answerQuestion(q) }]), 350);
   }
 
   return (
