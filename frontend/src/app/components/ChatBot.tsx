@@ -28,6 +28,11 @@ const KB: { keywords: string[]; answer: string }[] = [
       "Suman builds RAG pipelines, LLM apps and agentic systems using LangChain, LangGraph, MCP and vector databases — for example the open-source Context Vault RAG project.",
   },
   {
+    keywords: ["service", "services", "offer", "provide", "help with", "do you do", "freelance", "hire for", "work with"],
+    answer:
+      "Suman offers three main services: 1) Web & Mobile App Development — end-to-end full-stack web and cross-platform mobile apps (React, Vue, Next.js frontends with Python, Django & FastAPI APIs). 2) AI Agent & LLM Projects — RAG pipelines, agentic workflows and tool-calling assistants with LangChain, LangGraph & MCP. 3) Freelance & Collaboration — remote-friendly short or long-term contracts, shipping reliable, maintainable products on time.",
+  },
+  {
     keywords: ["project", "built", "portfolio", "context", "vault", "featured"],
     answer:
       "Featured projects: Context Vault (RAG system, open-source on GitHub), AutoPilot multi-agent orchestrator, DocuMind AI document Q&A, DevConnect and ShopSphere. See the Projects section for details.",
@@ -61,7 +66,7 @@ function findAnswer(q: string): string {
   );
 }
 
-const suggestions = ["Skills", "Projects", "AI work", "Availability"];
+const suggestions = ["Skills", "Services", "Projects", "AI work", "Availability"];
 
 export default function ChatBot() {
   const [open, setOpen] = useState(false);
