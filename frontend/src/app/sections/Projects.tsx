@@ -56,7 +56,7 @@ const projects: Project[] = [
     badge: "DC",
     title: "DevConnect — Developer Platform",
     desc: "A full-stack social platform for developers with real-time feeds, authentication, notifications and profile analytics, built on a scalable REST API with an optimistic UI.",
-    tags: ["React", "Node.js", "MongoDB", "WebSockets"],
+    tags: ["React", "FastAPI", "MongoDB", "WebSockets"],
   },
   {
     no: "05",

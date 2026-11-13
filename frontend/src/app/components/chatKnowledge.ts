@@ -63,7 +63,7 @@ export const CHUNKS: Chunk[] = [
   {
     topic: "skills",
     aliases: ["skill", "skills", "tech", "stack", "technology", "technologies", "tools", "know", "languages", "proficient", "expertise"],
-    text: "Suman's tech stack — Backend: Python, Django, FastAPI, REST API, Celery, Redis, PostgreSQL, MongoDB. AI/ML: LLM / OpenAI, RAG, LangChain, LangGraph, MCP, AI Agents. Web scraping & data: BeautifulSoup, Selenium, Scrapy, Data Extraction, Automation, ETL Pipelines. DevOps: Docker, AWS, CI/CD, GitHub Actions, Git. Frontend: React, Vue.js, Next.js, TypeScript, JavaScript, Tailwind.",
+    text: "Suman's tech stack — Backend: Python, Django, FastAPI, REST API, Celery, Redis, PostgreSQL, MongoDB. AI/ML: LLM / OpenAI, RAG, LangChain, LangGraph, MCP, AI Agents. Web scraping & data: BeautifulSoup, Selenium, Scrapy, Data Extraction, Automation, ETL Pipelines. DevOps: Docker, AWS, CI/CD, GitHub Actions, Git. Frontend: JavaScript, React, Vue.js, Next.js, TypeScript, Chart.js, Tailwind.",
   },
   {
     topic: "skills-ai",
@@ -74,6 +74,11 @@ export const CHUNKS: Chunk[] = [
     topic: "skills-scraping",
     aliases: ["scraping", "scrape", "crawl", "crawler", "selenium", "beautifulsoup", "scrapy", "data extraction", "automation", "etl", "pipeline"],
     text: "For web scraping, data extraction and automation Suman uses BeautifulSoup, Selenium and Scrapy to build data pipelines and ETL workflows — for example Python pipelines processing 5,000+ records and cutting manual effort by 60%.",
+  },
+  {
+    topic: "skills-frontend",
+    aliases: ["frontend", "front end", "front-end", "ui", "ux", "react", "vue", "vuejs", "nextjs", "next.js", "javascript", "js", "typescript", "chart.js", "chartjs", "charts", "data viz", "visualization", "responsive", "interface"],
+    text: "On the frontend Suman has strong hands-on experience building fast, responsive, accessible interfaces with JavaScript, React, Vue.js, Next.js and TypeScript, styled with Tailwind, and interactive data visualizations with Chart.js. He has shipped reusable React/Vue/Nuxt components for production B2B platforms and focuses on clean UI/UX and performance.",
   },
 
   // ---- Services ----
@@ -112,7 +117,7 @@ export const CHUNKS: Chunk[] = [
   {
     topic: "project-devconnect",
     aliases: ["devconnect", "developer platform", "social", "real-time", "feeds", "notifications", "websockets"],
-    text: "DevConnect is a full-stack social platform for developers with real-time feeds, authentication, notifications and profile analytics, built on a scalable REST API with an optimistic UI. Built with React, Node.js, MongoDB and WebSockets.",
+    text: "DevConnect is a full-stack social platform for developers with real-time feeds, authentication, notifications and profile analytics, built on a scalable REST API with an optimistic UI. Built with React, FastAPI, MongoDB and WebSockets.",
   },
   {
     topic: "project-shopsphere",

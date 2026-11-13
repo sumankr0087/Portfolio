@@ -20,6 +20,7 @@ import {
   SiTypescript,
   SiJavascript,
   SiTailwindcss,
+  SiChartdotjs,
 } from "react-icons/si";
 
 type Skill = { ab: string; name: string; Icon?: IconType; color?: string };
@@ -62,6 +63,7 @@ const skills: Skill[] = [
   { ab: "Ts", name: "TypeScript", Icon: SiTypescript, color: "#3178C6" },
   { ab: "Js", name: "JavaScript", Icon: SiJavascript, color: "#C9A800" },
   { ab: "Tw", name: "Tailwind", Icon: SiTailwindcss, color: "#38BDF8" },
+  { ab: "Cj", name: "Chart.js", Icon: SiChartdotjs, color: "#FF6384" },
 ];
 
 export default function Skills() {
@@ -69,9 +71,9 @@ export default function Skills() {
     <section id="skills" className="mx-auto max-w-6xl px-6 py-10">
       <p className="section-label mb-2">02 · Skills</p>
       <h2 className="font-display text-3xl md:text-4xl font-bold mb-3">Tech Stack</h2>
-      <p className="text-neutral-600 max-w-2xl mb-8 text-[0.95rem]">
-        Backend systems, AI tooling, web scraping, data extraction and automation,
-        DevOps, and frontend frameworks I use to build scalable, intelligent products.
+      <p className="text-neutral-600 max-w-4xl mb-8 text-[0.95rem]">
+        Backend systems, AI tooling, web scraping, data extraction and automation, DevOps,
+        and modern frontend frameworks I use to build scalable, intelligent products.
       </p>
 
       <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3">

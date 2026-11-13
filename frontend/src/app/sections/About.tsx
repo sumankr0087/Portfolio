@@ -13,10 +13,11 @@ export default function About() {
             from pixel-perfect interfaces to resilient backend services.
           </p>
           <p>
-            Currently a Python Developer at <span className="text-violet-600 font-semibold">Double9
-            Books</span>, I build web applications and REST APIs with Python,
-            Django &amp; FastAPI, craft modern frontends in React, Vue and Next.js,
-            and design intelligent systems using LLMs.
+            On the frontend I build fast, responsive, accessible interfaces with
+            <span className="text-neutral-900 font-semibold"> JavaScript, React, Vue,
+            Next.js and Chart.js</span> — turning complex data and workflows into clean,
+            interactive UIs. On the backend I build web applications and REST APIs with
+            Python, Django &amp; FastAPI.
           </p>
           <p>
             Lately I&apos;ve been focused on <span className="text-neutral-900 font-semibold">
@@ -31,6 +32,7 @@ export default function About() {
           <ul className="space-y-3 text-[0.9rem] text-neutral-700">
             {[
               "Full-stack web development",
+              "Frontend engineering & data viz",
               "LLM & RAG applications",
               "Agentic AI & tool-calling",
               "REST APIs & backend systems",
