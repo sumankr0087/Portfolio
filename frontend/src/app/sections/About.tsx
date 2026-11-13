@@ -22,7 +22,7 @@ export default function About() {
             Lately I&apos;ve been focused on <span className="text-neutral-900 font-semibold">
             RAG pipelines, LangChain, LangGraph, MCP and agentic AI</span> — building
             systems that reason over private knowledge and act autonomously with tools,
-            such as my open-source Context Vault RAG system.
+            such as my DocuSense document & policy AI, which is live.
           </p>
         </div>
 

@@ -21,7 +21,7 @@ export const CHUNKS: Chunk[] = [
   {
     topic: "focus",
     aliases: ["focus", "specialise", "specialize", "lately", "working on", "interests", "passion"],
-    text: "Lately Suman has focused on RAG pipelines, LangChain, LangGraph, MCP and agentic AI — systems that reason over private knowledge and act autonomously with tools, such as his open-source Context Vault RAG system. His focus areas: full-stack web development, LLM & RAG applications, agentic AI & tool-calling, REST APIs & backend systems, and clean, maintainable architecture.",
+    text: "Lately Suman has focused on RAG pipelines, LangChain, LangGraph, MCP and agentic AI — systems that reason over private knowledge and act autonomously with tools, such as his DocuSense document & policy AI. His focus areas: full-stack web development, LLM & RAG applications, agentic AI & tool-calling, REST APIs & backend systems, and clean, maintainable architecture.",
   },
 
   // ---- Current role / experience ----
@@ -68,7 +68,7 @@ export const CHUNKS: Chunk[] = [
   {
     topic: "skills-ai",
     aliases: ["ai", "ml", "llm", "rag", "agent", "agentic", "langchain", "langgraph", "mcp", "vector", "openai", "machine learning", "gen ai"],
-    text: "On the AI side Suman builds RAG pipelines, LLM apps and agentic systems using LangChain, LangGraph, MCP, OpenAI and vector databases — tool-calling assistants that reason over private data and act autonomously. Example: the open-source Context Vault RAG system.",
+    text: "On the AI side Suman builds RAG pipelines, LLM apps and agentic systems using LangChain, LangGraph, MCP, OpenAI and vector databases — tool-calling assistants that reason over private data and act autonomously. Example: DocuSense, his live document & policy AI.",
   },
   {
     topic: "skills-scraping",
@@ -92,7 +92,7 @@ export const CHUNKS: Chunk[] = [
   {
     topic: "projects-overview",
     aliases: ["project", "projects", "built", "portfolio", "featured", "work", "made", "created"],
-    text: "Featured projects: Autonomous Data Scientist (multi-agent AI business analyst, live demo), Context Vault (RAG system, open-source), AutoPilot (multi-agent orchestrator), DocuMind (AI document Q&A SaaS), DevConnect (developer social platform) and ShopSphere (e-commerce engine with AI recommendations). Ask about any one for details.",
+    text: "Featured projects: Autonomous Data Scientist (multi-agent AI business analyst, live demo), DocuSense (document & policy AI with citations, live demo), AutoPilot (multi-agent orchestrator), DocuMind (AI document Q&A SaaS), DevConnect (developer social platform) and ShopSphere (e-commerce engine with AI recommendations). Ask about any one for details.",
   },
   {
     topic: "project-autonomous-data-scientist",
@@ -100,9 +100,9 @@ export const CHUNKS: Chunk[] = [
     text: "Autonomous Data Scientist (AI Business Analyst) is Suman's latest project — a multi-agent AI system that turns a plain-English business question into a full data-science workflow: it generates SQL, runs exploratory analysis, trains ML models, draws charts and writes an executive report, with no code written by the user. Built with LangGraph, LangChain, Google Gemini, FastAPI, DuckDB, scikit-learn and Next.js. Live demo: sumankr0087.github.io/autonomous-data-scientist · Code: github.com/sumankr0087/autonomous-data-scientist",
   },
   {
-    topic: "project-context-vault",
-    aliases: ["context vault", "rag system", "retrieval", "vector store", "cited sources", "open source"],
-    text: "Context Vault is a production-grade Retrieval-Augmented Generation (RAG) system that ingests documents, builds a semantic vector store and answers questions grounded in your own knowledge base with cited sources. Built with Python, FastAPI, a Vector DB and LLMs. It's open-source: github.com/sumankr0087/context-vault-rag",
+    topic: "project-docusense",
+    aliases: ["docusense", "document ai", "policy ai", "rag system", "context vault", "retrieval", "vector store", "citations", "cited sources"],
+    text: "DocuSense is an enterprise document & policy AI (RAG system). Upload PDFs/policies and ask questions in plain English — it answers strictly from your documents with clause-level citations, a hallucination guardrail that refuses to guess, and automatic compliance notes. Built with LangChain, Chroma, Groq, FastEmbed, FastAPI and Next.js. Live demo: sumankr0087.github.io/context-vault-rag/ · Code: github.com/sumankr0087/context-vault-rag",
   },
   {
     topic: "project-autopilot",
