@@ -92,7 +92,7 @@ export const CHUNKS: Chunk[] = [
   {
     topic: "projects-overview",
     aliases: ["project", "projects", "built", "portfolio", "featured", "work", "made", "created"],
-    text: "Featured projects: Autonomous Data Scientist (multi-agent AI business analyst, live demo), DocuSense (document & policy AI with citations, live demo), AutoPilot (multi-agent orchestrator), DocuMind (AI document Q&A SaaS), DevConnect (developer social platform) and ShopSphere (e-commerce engine with AI recommendations). Ask about any one for details.",
+    text: "Featured projects: Autonomous Data Scientist (multi-agent AI business analyst, live demo), DocuSense (document & policy AI with citations, live demo), AutoPilot (multi-agent orchestrator), DevConnect (developer social platform) and ShopSphere (e-commerce engine with AI recommendations). Ask about any one for details.",
   },
   {
     topic: "project-autonomous-data-scientist",
@@ -108,11 +108,6 @@ export const CHUNKS: Chunk[] = [
     topic: "project-autopilot",
     aliases: ["autopilot", "multi-agent", "orchestrator", "autonomous agents", "tool calling", "reasoning timeline"],
     text: "AutoPilot is an agentic AI platform where specialised autonomous agents plan, delegate and execute multi-step tasks using tool-calling, with a live reasoning timeline and human-in-the-loop approvals. Built with LangGraph, Python and Next.js.",
-  },
-  {
-    topic: "project-documind",
-    aliases: ["documind", "document q&a", "pdf", "chat with documents", "saas", "billing"],
-    text: "DocuMind is a full-stack SaaS that lets teams upload PDFs and chat with them — streaming LLM responses, per-workspace memory, usage billing and role-based access control. Built with Next.js, FastAPI, PostgreSQL and OpenAI.",
   },
   {
     topic: "project-devconnect",

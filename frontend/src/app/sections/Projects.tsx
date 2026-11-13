@@ -51,15 +51,6 @@ const projects: Project[] = [
   },
   {
     no: "04",
-    category: "LLM SAAS",
-    year: "2026",
-    badge: "DM",
-    title: "DocuMind — AI Document Q&A",
-    desc: "A full-stack SaaS that lets teams upload PDFs and chat with them — streaming LLM responses, per-workspace memory, usage billing and role-based access control.",
-    tags: ["Next.js", "FastAPI", "PostgreSQL", "OpenAI"],
-  },
-  {
-    no: "05",
     category: "FULL STACK",
     year: "2025",
     badge: "DC",
@@ -68,7 +59,7 @@ const projects: Project[] = [
     tags: ["React", "Node.js", "MongoDB", "WebSockets"],
   },
   {
-    no: "06",
+    no: "05",
     category: "FULL STACK",
     year: "2025",
     badge: "SS",
